@@ -69,7 +69,9 @@ while True:
         x3,y3,x4,y4,id=bbox
         cx=int(x3+x4)//2
         cy=int(y3+y4)//2
+        w,h=x4-x3,y4-y3
         cv2.rectangle(frame,(x3,y3),(x4,y4),(0,255,0),2)
+#        cvzone.cornerRect(frame,(x3,y3,w,h),10,5)
         cv2.circle(frame,(cx,cy),4,(255,0,0),-1)
         cvzone.putTextRect(frame,f'{id}',(x3,y3),1,1)
         
